@@ -1,0 +1,111 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+#illusion {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 2rem;
+    color: #2d6a4f;
+    transform: perspective(500px) rotateX(45deg);
+    animation: spin 10s infinite linear;
+}
+
+@keyframes spin {
+    0% { transform: perspective(500px) rotateX(45deg) rotateY(0deg); }
+    100% { transform: perspective(500px) rotateX(45deg) rotateY(360deg); }
+}
+
+#illusion-object {
+    width: 100px;
+    height: 100px;
+    background-color: #5f9e56;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+h1, h2, p {
+    text-align: center;
+}
+
+/* Bottom Menu Bar */
+#bottom-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #2d6a4f;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+#bottom-bar button {
+    background-color: #fff;
+    color: #2d6a4f;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#bottom-bar button:hover {
+    background-color: #f4f4f4;
+}
+
+/* Camera Section */
+#video {
+    border: 2px solid #2d6a4f;
+    margin-bottom: 10px;
+}
+
+#capture {
+    background-color: #2d6a4f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#capture:hover {
+    background-color: #1b4d3f;
+}
+
+/* Login Dialog */
+#login-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.dialog-box input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.dialog-box button {
+    background-color: #2d6a4f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dialog-box button:hover {
+    background-color: #1b4d3f;
+}

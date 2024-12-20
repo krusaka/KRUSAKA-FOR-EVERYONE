@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krusaka - Plant Disease Detection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- 3D Illusion Object (centered) -->
+    <div id="illusion">
+        <div id="illusion-object"></div>
+        <h2>Krusaka</h2>
+        <p>Plant Disease Detection</p>
+    </div>
+
+    <!-- Main Content Section -->
+    <div id="main-content">
+        <div id="home" class="content-section">
+            <h1>Welcome to Krusaka</h1>
+            <p>We help you detect plant diseases and provide care suggestions.</p>
+        </div>
+
+        <div id="camera" class="content-section" style="display: none;">
+            <h2>Capture Plant Photo</h2>
+            <video id="video" width="640" height="480" autoplay></video>
+            <button id="capture" onclick="capturePhoto()">Capture Photo</button>
+            <canvas id="canvas" style="display:none;"></canvas>
+            <p id="instruction">Follow the instructions and take a clear photo of your plant.</p>
+        </div>
+
+        <div id="login" class="content-section" style="display: none;">
+            <h2>Login</h2>
+            <button onclick="openLoginDialog()">Click to Login</button>
+        </div>
+    </div>
+
+    <!-- Bottom Menu Bar -->
+    <div id="bottom-bar">
+        <button onclick="showHome()">Home</button>
+        <button onclick="showCamera()">Camera</button>
+        <button onclick="showLogin()">Login</button>
+    </div>
+
+    <!-- Login Dialog -->
+    <div id="login-dialog" style="display: none;">
+        <div class="dialog-box">
+            <h3>Login</h3>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <button onclick="submitLogin()">Login</button>
+            <button onclick="closeLoginDialog()">Cancel</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
